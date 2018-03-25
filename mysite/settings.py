@@ -25,7 +25,7 @@ SECRET_KEY = '7jg%r3f!&jgctnvvre2q6eda5vi_qeqxj8*h^d%(7acyuc@zy0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<emmanobot>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'emmanobot.pythonanywhere.com']
 
 
 # Application definition

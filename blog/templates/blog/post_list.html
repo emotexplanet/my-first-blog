@@ -1,24 +1,18 @@
 <html>
   <head>
-    <title>Django Girls blog</</title>
+    <title>Django Girls blog</title>
   </head>
   <body>
     <div>
-      <h1><a href="">Django Girls Blog</a></h1>
+      <h1><a href="/">Django Girls Blog</a></h1>
     </div>
-    <div>
-      <p>published: 24.03.2018, 12:14</p>
-      <h2><a href="">My first post</a></h2>
-      <p>We've created three div sections here.
-The first div element contains the title of our blog – it's a heading and a link
-Another two div elements contain our blogposts with a published date, h2 with a post title that is clickable and two
-p s (paragraph) of text, one for the date and one for our blogpost..</p>
-    </div>
-    <div>
-      <p>published: 24.03.2018, 12:14</p>
-      <h2><a href="">My second post</a></h2>
-      <p>Probably you have also noticed that each opening tag is matched by a closing tag, with a / , and that elements are nested
-(i.e. you can't close a particular tag until all the ones that were inside it have been closed too).</p>
-    </div>
+
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
